@@ -1,13 +1,8 @@
 #/bin/bash
 # install pkgs
-sudo pacman -S bind-tools base-devel cmake nfs-utils alacritty picom nitrogen tmux exa firefox mc polybar rofi zsh figlet lolcat mpg123 neofetch vlc expac deluge-gtk copyq gvim 
+sudo pacman -S bind-tools base-devel cmake nfs-utils alacritty picom nitrogen tmux exa firefox mc polybar rofi zsh figlet lolcat mpg123 neofetch vlc expac deluge-gtk copyq gvim pavucontrol
 
-# AUR pkgs
-# install yay
-# git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
-# yay inxi-git nerd-fonts-source-code-pro
-
-#Currently in yay (Dir)
+#Populate Git Dir
 cd ~ && mkdir Git && cd Git
 #Clone Git My Repos
 git clone https://github.com/TheGassyNinja/i3-configs
@@ -25,9 +20,24 @@ mkdir ~/.config/alacritty && cp ~/Git/confs/alacritty.yml ~/.config/alacritty/
 cp -r ~/Git/confs/vis ~/.config/
 cp ~/Git/confs/.vimrc ~
 
+#Add vim plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 #
+# AUR pkgs
+# install yay
+git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+yay inxi-git
+yay nerd-fonts-source-code-pro
 
-#
+# OMZ
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+cp ~/Git/confs/.zshrc ~
+
 
 #
 
