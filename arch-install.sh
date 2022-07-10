@@ -4,8 +4,8 @@ sudo pacman -S bind-tools base-devel cmake nfs-utils alacritty picom nitrogen tm
 
 # AUR pkgs
 # install yay
-git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
-yay inxi-git nerd-fonts-source-code-pro
+# git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+# yay inxi-git nerd-fonts-source-code-pro
 
 #Currently in yay (Dir)
 cd ~ && mkdir Git && cd Git
