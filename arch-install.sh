@@ -18,12 +18,12 @@ git clone https://github.com/TheGassyNinja/Notes
 
 #Copy files into functional locations (currently ~)
 # From i3-configs
-cp ~/Git/i3-configs/config ~
+cp ~/Git/i3-configs/config ~/.config/i3 
 cp ~/Git/i3-configs/picom.conf ~/.config
 # From Confs
-mkdir ~/.config/alacritty && cp ~/Git/Confs/alacritty.yml ~/.config/alacritty/
-cp -r ~/Git/Confs/vis ~/.config/
-cp ~/Git/Confs/.vimrc ~
+mkdir ~/.config/alacritty && cp ~/Git/confs/alacritty.yml ~/.config/alacritty/
+cp -r ~/Git/confs/vis ~/.config/
+cp ~/Git/confs/.vimrc ~
 
 #
 
