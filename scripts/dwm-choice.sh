@@ -28,11 +28,11 @@ echo $var1
         git clone https://github.com/bakkeby/dwm-flexipatch
         git clone https://github.com/bakkeby/st-flexipatch
         git clone https://github.com/bakkeby/dmenu-flexipatch
-        cd dwm
+        cd dwm-flexipatch
         make && sudo make install
-        cd $HOME/Suckless/st
+        cd $HOME/Suckless/st-flexipatch
         make && sudo make install
-        cd $HOME/Suckless/dmenu
+        cd $HOME/Suckless/dmenu-flexipatch
         make && sudo make install
         cd $HOME
         cp /etc/X11/xinit/xinitrc $HOME/.xinitrc
@@ -50,7 +50,7 @@ echo $var1
         make && sudo make install
         cd $HOME/Suckless/st
         make && sudo make install
-        cd $HOME/Suckless/dmenu
+        cd $HOME/Suckless/dmenu-flexipatch
         make && sudo make install
         cd $HOME
         cp /etc/X11/xinit/xinitrc $HOME/.xinitrc
