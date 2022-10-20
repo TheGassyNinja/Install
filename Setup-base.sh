@@ -38,8 +38,6 @@ cp /etc/X11/xinit/xinitrc $HOME/.xinitrc
 # {MAKE BETTER sed fundtion} > .xinitrc
 sed -i 's/exec xterm -geometry 80x66+0+0 -name login/exec dwm/g' .xinitrc
 
-touch ~/Xauthority
-sudo systemctl start sshd
-sudo systemctl enable sshd
+
 
 echo "REBOOT and STARTX"
