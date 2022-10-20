@@ -13,8 +13,6 @@ cp ~/Git/.config/.vimhrc ~
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-sudo systemctl start sshd
-sudo systemctl enable sshd
 
 # PICK WM
 # DWM
@@ -40,5 +38,7 @@ cp /etc/X11/xinit/xinitrc $HOME/.xinitrc
 sed -i 's/exec xterm -geometry 80x66+0+0 -name login/exec dwm/g' .xinitrc
 
 
+sudo systemctl start sshd
+sudo systemctl enable sshd
 
 echo "REBOOT and STARTX"
