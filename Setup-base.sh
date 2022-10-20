@@ -14,6 +14,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 
+
 # PICK WM
 # DWM
 mkdir ~/Suckless && cd ~/Suckless
@@ -37,7 +38,7 @@ cp /etc/X11/xinit/xinitrc $HOME/.xinitrc
 # {MAKE BETTER sed fundtion} > .xinitrc
 sed -i 's/exec xterm -geometry 80x66+0+0 -name login/exec dwm/g' .xinitrc
 
-
+touch ~/Xauthority
 sudo systemctl start sshd
 sudo systemctl enable sshd
 
