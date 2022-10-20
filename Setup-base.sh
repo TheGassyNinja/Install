@@ -3,10 +3,13 @@
 # {Not Neededsudo pacman -R vim
 
 
+$HOME=/home/$USER
+
+
 sudo pacman -S gvim mc openssh
 
 
-mkdir ~/Git && cd ~/Git
+mkdir $HOME/Git && cd $HOME/Git
 git clone https://github.com/thegassyninja/.config
 cp ~/Git/.config.bashrc ~
 cp ~/Git/.config/.vimhrc ~
@@ -17,7 +20,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 # PICK WM
 # DWM
-mkdir ~/Suckless && cd ~/Suckless
+mkdir $HOME/Suckless && cd $HOME/Suckless
 git clone https://git.suckless.org/dwm
 git clone https://git.suckless.org/st
 git clone https://git.suckless.org/dmenu
