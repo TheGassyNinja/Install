@@ -3,7 +3,7 @@
 # {Not Neededsudo pacman -R vim
 
 
-sudo pacman -S gvim mc
+sudo pacman -S gvim mc openssh
 
 
 mkdir ~/Git && cd ~/Git
