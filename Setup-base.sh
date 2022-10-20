@@ -11,9 +11,9 @@ sudo pacman -S gvim mc openssh
 
 mkdir $HOME/Git && cd $HOME/Git
 git clone https://github.com/thegassyninja/.config
-cp ~/Git/.config.bashrc ~
-cp ~/Git/.config/.vimhrc ~
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+cp $HOME/Git/.config.bashrc ~
+cp $HOME/Git/.config/.vimhrc ~
+curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 
@@ -26,11 +26,11 @@ git clone https://git.suckless.org/st
 git clone https://git.suckless.org/dmenu
 cd dwm
 make && make install
-cd ~/Suckless/st
+cd $HOME/Suckless/st
 make && make install
-cd ~/Suckless/dmenu
+cd $HOME/Suckless/dmenu
 make && make install
-#
+
 #
 #
 #
