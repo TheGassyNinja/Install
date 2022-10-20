@@ -4,7 +4,7 @@
 
 #Vars
 $HOME=/home/$USER
-sudo pacman -S gvim mc openssh
+sudo pacman -S gvim mc openssh bind-tools base-devel exa expac
 echo -e "(1) MYpersonal .config - (2) Your .config -  (0) None"
 read -p "Choose CONFIG: " var1
 echo $var1

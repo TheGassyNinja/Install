@@ -14,6 +14,15 @@ cp $HOME/Git/.config/.vimrc ~
 curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+
+git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+yay inxi-git
+yay nerd-fonts-source-code-pro
+yay tdrop-git
+yay picom-animations-git
+yay cava
+yay xfce-theme-greybird
+
 sleep 2
-echo -e "done"
+echo -e "done......"
 fi
