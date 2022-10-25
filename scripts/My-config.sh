@@ -1,12 +1,15 @@
 #!/usr/bin/env sh
 DIR=$HOME/Git
-
+PAC=$HOME/install/scripts/pac-kages.txt
 # if ~/Git exisits exit; else
 if [ -d "$DIR" ]; then
     echo -e "Configs have been installed"
 # Run WM-Select
 else
 echo -e "Installing Configs........"
+sleep 1
+sudo pacman -S $(cat pac-kages.txt)
+
 mkdir $HOME/Git && cd $HOME/Git
 git clone https://github.com/thegassyninja/.config
 cp $HOME/Git/.config/.bashrc ~
