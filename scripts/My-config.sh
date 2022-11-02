@@ -8,7 +8,7 @@ if [ -d "$DIR" ]; then
 else
 echo -e "Installing Configs........"
 sleep 1
-sudo pacman -S $(cat pac-kages.txt)
+sudo pacman -S $(cat pac-kages.txt | grep -v "#")
 
 mkdir $HOME/Git && cd $HOME/Git
 git clone https://github.com/thegassyninja/.config
@@ -25,6 +25,7 @@ yay tdrop-git
 yay picom-animations-git
 yay cava
 yay xfce-theme-greybird
+
 
 sleep 2
 echo -e "done......"
