@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#COMMENT
 
 echo -e "(1) MYpersonal .config - (2) Your .config -  (0) None"
 read -p "CHOOSE :" var1
