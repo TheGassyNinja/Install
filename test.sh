@@ -1,16 +1,32 @@
 #!/bin/bash
 #COMMENT
+cp .bashrc ~ # && .bash_profile
+echo "Installing gvim" #Add choice for cli editor/set env based on choice
+sudo pacman -S gvim # Use CLI env choice
 
-echo -e "(1) MYpersonal .config - (2) Your .config -  (0) None"
-read -p "CHOOSE :" var1
-echo $var1
-    if [ "$var1" = 1 ]; then
-           $HOME/install/scripts/My-config.sh
+# install vim plug and cp .vimrc ~
+#curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs \
+#    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+#cp .vimrc ~ (might need path)
 
-    elif [ "$var1" = 2 ]; then
-           echo -e "git clone yours"
-    elif [ "$var1" = 0 ]; then
-           echo -e "NONE"
-    else
-	    echo -e "NOT A CHOICE"
-fi
+#get packages
+echo "Pick your Packages"
+sleep 2
+cd scripts && vim pac-kages.txt
+echo "packages list updated"
+sudo pacman -S $(cat pac-kages.txt | grep -v "#")
+
+# get AUR helper and pkgs
+#
+# Git WM of choice and configure
+
+# get $TERM package && set $TERM env
+
+
+# git configs && list and cp ~/.configs
+#
+
+
+#
+#
+#

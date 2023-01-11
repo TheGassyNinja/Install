@@ -1,0 +1,24 @@
+#+title: Install(2)
+#+DESCRIPTION: Better Install Script
+#+PROPERTY: header-args :tangle
+
+* TABLE OF CONTENTS :toc:
+-   [[#trunk][Trunk]]
+  -  [[#install-depends---set-envvars][Install Depends - Set Env/VARS]]
+
+*   Trunk
+**  Install Depends - Set Env/VARS
+
+#+begin_src bash :tangle
+#!/usr/bin/env sh
+
+# VARS
+
+# Depends (Script)
+sudo pacman -S gvim
+cd scripts && vim pac-kages.txt ; cd ..
+echo "packages list updated"
+sleep 2 ; echo "...next"
+#+end_src
+
+#+RESULTS:

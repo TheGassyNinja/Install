@@ -1,12 +1,4 @@
-[[ $- != *i* ]] && return
-bind 'set show-all-if-ambiguous on'
-bind 'TAB:menu-complete'
-shopt -s autocd
-EDITOR="/usr/bin/vim"
-export EDITOR
-PATH="$HOME/.emacs.d/bin:$PATH"
-#PS1='[\u@\h \W]\$ '
-PS1="\e[0;32m\A  [\w]  \$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')  \$\n -->  \[$(tput sgr0)\]"
+# Bash Aliases
 
 alias c='clear'
 alias cl='clear && neofetch --config ~/.config/neofetch/colorsonly.conf && la'
@@ -34,7 +26,9 @@ alias Scripts='cd $HOME/Scripts/'
 alias Downloads='cd $HOME/Downloads'
 alias Music='cd $HOME/Music'
 
+alias Weather='notify-send "$(inxi -xxx -W 76226)"'
+
 alias jctl="journalctl -p 3 -xb"
 
-alias car='cava -p ~/.config/cava/right-config'
-alias cal='cava -p ~/.config/cava/left-config'
+alias MNT-NFS="sudo mount -t nfs -o vers=4 192.168.254.169:/export/DataT ~/mnt/DataT"
+alias killani='ps -aux | grep back4.sh | kill $(awk "{print $2}")'
